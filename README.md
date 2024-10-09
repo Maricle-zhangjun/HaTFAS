@@ -51,24 +51,10 @@ dataset_path/train(val or test)/attack/video_dir/face_image_1.jpg
 
 For each face dataset, teacher network is pre-trained based on [DeiT](https://github.com/facebookresearch/deit) and then used to supervise the learning of student, the backbone differences between teacher and student as: 
 
-<style>
-.center 
-{
-  width: auto;
-  display: table;
-  margin-left: auto;
-  margin-right: auto;
-}
-</style>
-
-<div class="center">
-
 |          Model          | Embedding dimension | Heads | Layers |
 |:-----------------------:|:---------:|:---------:|:---------:|
 |Teacher (ViT-Base)|     768     |   12    |  12  |
 |Student (ViT-Tiny)|     192     |    3    |  12  |
-
-</div>
 
 **Distilling student networks**
 
