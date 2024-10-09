@@ -1,0 +1,5 @@
+# distill
+OMP_NUM_THREADS=1 CUDA_VISIBLE_DEVICES=0 python main.py --batch-size 128 --epochs 300 --distributed --output_dir ./output/pro2_tiny_tau2/ --data-path /public-data/OULU_mask/Protocol_2 --data-set FACE --teacher-path /home/cv2022/zj/Teacher_model/ViT/oulu_base/min_hter_checkpoint.pth --model deit_tiny_patch16_224 --teacher-model deit_base_patch16_224 --distillation-type soft --distillation-alpha 0.5 --distillation-beta 1 --distillation-tau 2 --s-id 4 8 --t-id 4 8
+
+# eval
+OMP_NUM_THREADS=1 CUDA_VISIBLE_DEVICES=0 python main.py --batch-size 128 --eval --data-path /public-data/OULU_mask/Protocol_2 --data-set FACE_TEST --model deit_tiny_patch16_224 --resume ./output/pro2_tiny_tau2/min_eer_checkpoint.pth 
