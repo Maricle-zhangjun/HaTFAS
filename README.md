@@ -48,6 +48,7 @@ dataset_path/train(val or test)/attack/video_dir/face_image_1.jpg
 ```
 
 **Pretraining teacher networks**
+
 Recently, we provided pre-trained teacher model weights on [MEGA](https://mega.nz/folder/AUIxCQQY#Pc39K-HluhL2-WXEjyw2mw) to peer replicate our code. 
 For each face dataset, teacher network is pre-trained based on [DeiT](https://github.com/facebookresearch/deit) and then used to supervise the learning of student, the backbone differences between teacher and student as: 
 
